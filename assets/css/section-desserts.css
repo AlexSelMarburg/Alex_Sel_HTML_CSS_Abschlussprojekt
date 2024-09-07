@@ -1,0 +1,211 @@
+section#desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  min-height: 600px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: var(--primary-bg-color);
+}
+
+section#desserts #desserts-container {
+  min-height: 400px;
+  width: 100%;
+  padding: 10px;
+  flex-grow: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1;
+  gap: 0;
+  justify-items: center;
+  align-items: center;
+}
+
+/*========== dessert card ==========*/
+
+section#desserts .dessert-card {
+  height: 410px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  margin: 2em;
+}
+
+section#desserts .dessert-card img {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  top: 3em;
+  right: -1em;
+  filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.5));
+}
+
+section#desserts .dessert-card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+section#desserts .dessert-card h2 {
+  color: #fff;
+  font-size: 22px;
+}
+section#desserts .dessert-card h4 {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+section#desserts .dessert-card .banner {
+  height: 12em;
+  padding-top: 1em;
+  border-radius: 10px 10px 0px 50%;
+}
+
+section#desserts .dessert-card:nth-child(odd) .banner,
+section#desserts .dessert-card:nth-child(odd) .stock-info {
+  background: linear-gradient(90deg, #fb3854 0%, #901026 100%);
+}
+
+section#desserts .dessert-card:nth-child(even) .banner,
+section#desserts .dessert-card:nth-child(even) .stock-info {
+  background: linear-gradient(90deg, #b7df5a 0%, #8ab92c 100%);
+}
+
+section#desserts .dessert-card .details {
+  padding: 10px;
+}
+
+section#desserts .dessert-card .details p,
+section#desserts .dessert-card .details h4 {
+  text-align: left;
+  color: #000;
+}
+
+section#desserts .dessert-card .stock-info {
+  width: 100%;
+  height: 30px;
+  padding: 25px 10px;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section#desserts .dessert-card .stock-info p {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+section#desserts .dessert-card .stock-info i {
+  font-size: 28px;
+}
+
+section#desserts .dessert-card:nth-child(odd) .stock-info {
+  background-color: #e82264;
+}
+section#desserts .dessert-card:nth-child(odd) h4 {
+  color: #e82264;
+}
+
+section#desserts .dessert-card:nth-child(even) .actions .stock-info {
+  background-color: #e5793f;
+}
+
+section#desserts .dessert-card:nth-child(even) h4 {
+  color: #e5793f;
+}
+
+section#desserts .dessert-card .pop {
+  transform: translateZ(25px);
+}
+
+/*========== newcomer card ==========*/
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+section#desserts .dessert-card .new-item {
+  position: absolute;
+  width: 55px;
+  height: auto;
+  top: 4.5em;
+  left: 2em;
+  animation-name: pulse-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+
+@media screen and (max-width: 1500px) {
+  section#desserts .dessert-card {
+    height: 390px;
+    width: 85%;
+  }
+
+  section#desserts .dessert-card h2 {
+    font-size: 18px;
+  }
+
+  section#desserts .dessert-card img {
+    width: 160px;
+    top: 3em;
+    right: -1em;
+  }
+  section#desserts .dessert-card .details p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  section#desserts #desserts-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    gap: 0;
+    padding: 10px;
+  }
+
+  section#desserts .dessert-card {
+    height: 390px;
+    width: 65%;
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#desserts #desserts-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  section#desserts .dessert-card {
+    height: 390px;
+    width: 95%;
+    max-width: 300px;
+  }
+}

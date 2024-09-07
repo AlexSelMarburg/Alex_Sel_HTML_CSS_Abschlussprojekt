@@ -1,0 +1,231 @@
+section#contact {
+  padding-top: 25px;
+  text-align: center;
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  background-color: var(--primary-bg-color);
+}
+
+#contact-container {
+  min-height: 450px;
+  width: 100%;
+  display: flex;
+  gap: 70px;
+  margin-top: 55px;
+  padding-bottom: 45px;
+}
+
+#contact-container .info {
+  width: 50%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  z-index: 2;
+}
+
+#contact-container .infos {
+  width: 500px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact-container .info-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 15px;
+  font-size: 26px;
+}
+
+#contact-container .info-item i {
+  color: var(--primary-accent-color);
+  font-size: 30px;
+}
+
+#contact-container .info-socials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  border-top: 1px solid var(--primary-accent-color);
+  border-bottom: 1px solid var(--primary-accent-color);
+  padding: 15px;
+}
+
+#contact-container .info-socials .info-social i {
+  font-size: 60px;
+  color: var(--text-color);
+}
+
+#contact-container .info-socials .info-social i:hover {
+  color: var(--call-to-action-hover-color);
+}
+
+/* -----------FORMULAR--------------- */
+#contact-container .form {
+  width: 50%;
+  height: 100%;
+  min-height: 450px;
+  z-index: 2;
+}
+
+#contact-container .form form {
+  width: 500px;
+  min-height: 450px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.f-input {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--primary-accent-color);
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: 0;
+  transition: all 0.3s;
+  background-color: var(--primary-bg-color);
+}
+
+.f-input:focus {
+  border: 2px solid springgreen;
+}
+
+#contact-container form textarea {
+  height: 180px;
+  line-height: 150%;
+  resize: none;
+  background-color: var(--primary-bg-color);
+}
+
+#contact-container form [type="submit"] {
+  width: 100%;
+  background: var(--call-to-action-color);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.5);
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.45s;
+  margin-top: -4px;
+  font-weight: 600;
+}
+
+#contact-container form [type="submit"]:hover {
+  background: var(--call-to-action-hover-color);
+  letter-spacing: 3px;
+}
+
+@media (pointer: coarse) {
+  #contact-container form [type="submit"] {
+    background: var(--call-to-action-hover-color);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #contact-container {
+    gap: 44px;
+  }
+
+  #contact-container .infos,
+  #contact-container .form form {
+    width: 410px;
+  }
+
+  #contact-container .info-item {
+    font-size: 24px;
+    gap: 10px;
+  }
+
+  #contact-container .info-item i {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #contact-container {
+    min-height: 450px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  #contact-container .info,
+  #contact-container .form {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #contact-container .info-socials {
+    padding: 8px;
+    border: none;
+  }
+
+  #contact-container .infos,
+  #contact-container .form,
+  #contact-container .form form {
+    min-height: 340px;
+    max-height: 360px;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #contact-container {
+    margin-top: 35px;
+  }
+
+  #contact-container .infos,
+  #contact-container .form form {
+    width: 354px;
+  }
+
+  #contact-container .info-item {
+    font-size: 18px;
+  }
+
+  #contact-container .info-item i {
+    font-size: 22px;
+  }
+}
+
+/* ----------------- */
+.wave-svg {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-svg svg {
+  position: relative;
+  display: block;
+  width: calc(150% + 1.3px);
+  height: 110px;
+  transform: rotateY(180deg);
+}
+
+.wave-svg .shape-fill {
+  fill: var(--footer-bg-color);
+}

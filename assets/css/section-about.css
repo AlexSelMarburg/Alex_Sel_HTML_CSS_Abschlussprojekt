@@ -1,0 +1,316 @@
+section#about-us {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg-color);
+}
+
+#about-container {
+  min-height: 400px;
+  margin-top: 30px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#restaurant-description {
+  height: 100%;
+  flex: 1;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 4fr 3fr 4fr;
+}
+
+#restaurant-description .description {
+  height: 100%;
+  background-color: var(--tertiary-bg-color);
+
+  position: relative;
+  box-shadow: var(--box-shadow-strong);
+}
+
+#restaurant-description .description h3 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+}
+
+#team-card-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+#restaurant-description .description > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 8px;
+  font-size: var(--font-sz-small);
+  width: 100%;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#restaurant-description .description > div span {
+  font-weight: 600;
+}
+
+#restaurant-description h3,
+#about-container .map-container > h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: "Mate SC", serif;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #f18b6d;
+}
+
+/* -------- our-motto ---------- */
+#restaurant-description .our-motto {
+  height: 100%;
+  padding: 10px 15px;
+  background-color: var(--tertiary-bg-color);
+  box-shadow: var(--box-shadow-strong);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+}
+
+#restaurant-description .our-motto div:first-of-type p {
+  font-weight: 500;
+}
+
+#restaurant-description .our-motto div:last-of-type {
+  margin: 15px 0;
+  border-top: 1px dashed var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+#restaurant-description .our-motto div:last-of-type p:first-of-type {
+  font-style: italic;
+  font-size: var(--font-sz-medium);
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f18b6d;
+}
+
+/* -----map------------------------- */
+#about-container .map-container {
+  height: 400px;
+  flex: 4;
+  box-shadow: var(--box-shadow-strong);
+  position: relative;
+}
+
+#about-container .map-container > h3 {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.65);
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  padding: 10px;
+  top: 20px;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* ------testimonials-------- */
+#testimonials {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+#testimonials > h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: "Mate SC", serif;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #f18b6d;
+}
+
+#testimonials .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  width: 350px;
+  height: 180px;
+
+  display: flex;
+
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.swiper-slide .left-container {
+  width: 130px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 20px; */
+}
+
+.swiper-slide .left-container .outer-wrapper {
+  height: 110px;
+  width: 110px;
+  padding: 8px;
+  border-radius: 50%;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.swiper-slide .left-container .inner-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.swiper-slide .left-container img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.swiper-slide .left-container .stars-container {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.swiper-slide .left-container .stars-container i {
+  color: yellow;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 16px;
+}
+
+.swiper-slide .info-container {
+  flex: 1;
+  background-color: #e91e63;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slide .info-container > div:first-of-type {
+  height: 44px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.swiper-slide .info-container > div:first-of-type h3 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.swiper-slide .info-container > div:last-of-type {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide .info-container > div:last-of-type p {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Mate SC", serif;
+  font-size: 16px;
+}
+
+/* --- media-queries---- */
+@media screen and (max-width: 1200px) {
+  #restaurant-description {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #about-container .map-container {
+    /* height: 1000px; */
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #restaurant-description .description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #about-container .map-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  #restaurant-description {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #restaurant-description {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  #restaurant-description .description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #about-container .map-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}

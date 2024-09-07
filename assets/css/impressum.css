@@ -1,0 +1,8 @@
+nav .nav-btns #nav-toggle {
+  display: none;
+}
+
+#impressum {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--primary-bg-color);
+}

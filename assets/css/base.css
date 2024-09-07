@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&family=Prata&display=swap");
+
+:root {
+  --wrapper-width: 1600px;
+  --header-height: 80px;
+
+  /*========== Font and typography ==========*/
+  --main-font: "Poppins", sans-serif;
+
+  --font-sz-small: 0.9rem;
+  --font-sz-medium: 1.1rem;
+  --font-sz-big: 1.7rem;
+  --font-sz-huge: 2.5rem;
+  --font-sz-main-heading: 3.2rem;
+
+  --box-shadow-smooth: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  --box-shadow-strong: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/*========== Colors ==========*/
+[data-theme="light"] {
+  /* --body-bg-color: #313233; */
+  --body-bg-color: #303030;
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #fefcff;
+  --tertiary-bg-color: #fff;
+
+  --nav-bg-color: #222222;
+  --nav-menu-bg-color: #192440;
+  --footer-bg-color: #222222;
+
+  --bg-gradient-1: linear-gradient(to top, #a8ff78, #78ffd6);
+  --bg-gradient-2: linear-gradient(to top, #bc4e9c, #f80759);
+  --bg-gradient-3: linear-gradient(to top, #cac531, #f3f9a7);
+
+  --primary-accent-color: #04d6fb;
+  --secondary-accent-color: #eee;
+  --tertiary-accent-color: #32d3d8;
+
+  --call-to-action-color: #00ffad;
+  --call-to-action-hover-color: #04d593;
+
+  --text-color: #222533;
+  --text-alt-color: #7a838d;
+
+  --h1-color: #e91e63;
+  --h2-color: #222f36;
+  --h3-color: #044afb;
+  --h4-color: #777;
+
+  --link-color: #6579e1;
+  --link-nav-color: #f8f8f8;
+
+  --box-shadow-color: rgba(0, 0, 0, 0.085);
+  --box-shadow-color-2: rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] {
+  --body-bg-color: #121212;
+  /* --primary-bg-color: #151821;
+  --secondary-bg-color: #0b1c2f; */
+
+  --primary-bg-color: #010117;
+  --secondary-bg-color: #120320;
+
+  --tertiary-bg-color: #151821;
+  --nav-bg-color: #020021;
+  --nav-menu-bg-color: #0a043c;
+  --footer-bg-color: #020021;
+
+  --bg-gradient-1: linear-gradient(to top, #a8ff78, #78ffd6);
+  --bg-gradient-2: linear-gradient(to top, #bc4e9c, #f80759);
+  --bg-gradient-3: linear-gradient(to top, #cac531, #f3f9a7);
+
+  --primary-accent-color: #f6c90e;
+  --secondary-accent-color: #eee;
+  --tertiary-accent-color: #32d3d8;
+
+  --call-to-action-color: #ffce55;
+  --call-to-action-hover-color: #adf802;
+
+  --text-color: #f8f8f8;
+  --text-alt-color: #7a838d;
+  --h1-color: var(--primary-accent-color);
+  --h2-color: #d4ff9d;
+  --h3-color: #7fc7d9;
+  --h4-color: #dddddd;
+
+  --link-color: #7fc7d9;
+  --link-nav-color: #f8f8f8;
+
+  --box-shadow-color: rgba(255, 255, 255, 0.085);
+  --box-shadow-color-2: rgba(238, 238, 238, 0.3);
+
+  --logo-dropshadow-color: #fff;
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-padding-top: var(--header-height);
+
+  font-family: var(--main-font);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  background: var(--body-bg-color);
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: var(--font-sz-huge);
+  color: var(--h1-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h2.section-heading {
+  font-family: "Mate SC", serif;
+
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  word-spacing: 1px;
+  font-weight: 500;
+  color: var(--h2-color);
+  font-size: var(--font-sz-big);
+}
+
+h3 {
+  font-size: var(--font-sz-medium);
+  font-weight: 500;
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: var(--font-sz-small);
+  font-weight: 400;
+  color: var(--h4-color);
+}
+
+p {
+  color: var(--text-color);
+  font-size: var(--font-sz-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--call-to-action-color);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.4s ease;
+  padding: 15px 10px;
+}
+
+button:hover {
+  background-color: var(--call-to-action-hover-color);
+  color: var(--body-bg-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.non-selectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*==================== LAYOUT ====================*/
+
+.page-wrapper {
+  max-width: var(--wrapper-width);
+  background-color: transparent;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*========== SCROLL UP BUTTON ==========*/
+
+.scrollup {
+  position: fixed;
+  bottom: -20%;
+  right: 20px;
+  background-color: var(--call-to-action-color);
+  opacity: 0.7;
+  padding: 0.3rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: 0.4s;
+}
+
+.scrollup i {
+  font-size: 2rem;
+  color: var(--body-bg-color);
+}
+
+.scrollup:hover {
+  opacity: 1;
+  background-color: var(--call-to-action-hover-color);
+}
+
+.scrollup-icon {
+  font-size: 1.5rem;
+  color: var(--body-bg-color);
+}
+
+.scrollup.show-scroll {
+  bottom: 20px;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+@media screen and (max-width: 1000px) {
+  :root {
+    --font-sz-main-heading: 2.4rem;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  :root {
+    --header-height: 50px;
+
+    --font-sz-small: 0.8rem;
+    --font-sz-medium: 1rem;
+    --font-sz-big: 1.4rem;
+    --font-sz-huge: 2.2rem;
+    --font-sz-main-heading: 2.1rem;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+
+  .scrollup {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scrollup i {
+    font-size: 1.8rem;
+  }
+
+  .scrollup.show-scroll {
+    bottom: calc(var(--header-height) + 20px);
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 450px) {
+  :root {
+    --font-sz-small: 0.7rem;
+    --font-sz-medium: 0.9rem;
+    --font-sz-big: 1.2rem;
+    --font-sz-huge: 2rem;
+    --font-sz-main-heading: 2.1rem;
+  }
+}
+
+/* wenn es ein touch-gerät ist und somit hover nicht geht */
+@media (pointer: coarse) {
+  .scrollup {
+    opacity: 1;
+  }
+}

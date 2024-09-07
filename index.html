@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Html/Css Basis Modul Projekt." />
+  <meta name="keywords" content="HTML, CSS, Template, Fake Restaurant Website" />
+  <meta name="Alex Sel" />
+  <meta name="robots" content="" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" href="assets/css/preloader.css" />
+  <link rel="icon" href="content/media/favicon.png" sizes="48x48" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <title>Alex Sel Projekt</title>
+</head>
+
+<body>
+  <div id="preloader">
+    <div>
+      <h2>...Loading...</h2>
+      <div class="loading"></div>
+    </div>
+  </div>
+  <script src="assets/js/preloader.js"></script>
+
+  <div class="page-wrapper">
+    <header class="header" id="header">
+      <nav class="nav">
+        <a href="#home" class="nav-logo">
+          <span id="header-icon"></span>
+        </a>
+        <div class="nav-menu non-selectable" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active-link">
+                <i class="ri-home-4-line nav-icon"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#best-seller" class="nav-link">
+                <i class="ri-restaurant-2-line nav-icon"></i>Bestseller
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#desserts" class="nav-link">
+                <i class="ri-cake-3-line nav-icon"></i>Desserts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-us" class="nav-link">
+                <i class="ri-map-2-line nav-icon"></i>About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="ri-customer-service-line nav-icon"></i>Contact
+              </a>
+            </li>
+          </ul>
+
+          <i class="ri-close-circle-line nav-close" id="nav-close"></i>
+        </div>
+        <div class="nav-btns">
+          <!-- theme btn -->
+          <i class="ri-moon-line change-theme" id="theme-button" data-theme-toggle></i>
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="ri-function-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="content">
+          <div class="text-box">
+            <div>
+              <h1 class="main-heading">
+                <span class="highlight anime-text-1">Supreme</span>
+                <br /><span class="anime-text-2">Burgers </span>
+                <span class="highlight anime-text-3">&amp;</span>
+                <span class="anime-text-4">more</span>
+              </h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consectetur, repellendus porro. Saepe veniam aut eum maxime,
+                reprehenderit rem ratione labore.
+              </p>
+            </div>
+            <a id="menu-btn" href="content/data/Unser Menü.pdf" download>Unser Menü <i
+                class="ri-file-download-line"></i></a>
+          </div>
+          <div class="img-box">
+            <img src="content/media/burger-header.png" alt="burger big picture" />
+            <ul class="header-socials">
+              <li>
+                <a data-aos="flip-up" data-aos-duration="800" href="https://www.instagram.com/" class="info-social"
+                  target="_blank">
+                  <i class="ri-instagram-fill"></i>
+                </a>
+              </li>
+              <li>
+                <a data-aos="flip-up" data-aos-duration="1500" href="https://de.linkedin.com/" target="_blank"
+                  class="info-social">
+                  <i class="ri-linkedin-box-fill"></i>
+                </a>
+              </li>
+              <li>
+                <a data-aos="flip-up" data-aos-duration="1900" href="https://www.facebook.com/?locale=de_DE"
+                  class="info-social" target="_blank">
+                  <i class="ri-facebook-box-fill"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--==================== BEST-SELLER ====================-->
+      <section class="best-seller section" id="best-seller">
+        <h2 class="section-heading" data-aos="zoom-in">Unsere Bestseller</h2>
+
+        <div class="slider-container" id="slider-container">
+          <div class="slider" id="slider">
+            <div class="slides" style="--img: url('../bg/sliderBGs/img2.jpg')">
+              <div class="content">
+                <h2>Pizza Salami extra Käse</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+            <div class="slides" style="--img: url('../bg/sliderBGs/img1.jpg')">
+              <div class="content">
+                <h2>Hamburger Menü</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+            <div class="slides" style="--img: url('../bg/sliderBGs/img3.jpeg')">
+              <div class="content">
+                <h2>Hähnchen-Wrap</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+            <div class="slides" style="--img: url('../bg/sliderBGs/img4.jpg')">
+              <div class="content">
+                <h2>T-Bone Steak</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+            <div class="slides" style="--img: url('../bg/sliderBGs/img5.jpg')">
+              <div class="content">
+                <h2>Feigen-Prosciutto Salat</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+            <div class="slides" style="--img: url('../bg/sliderBGs/img6.jpg')">
+              <div class="content">
+                <h2>Knusprige Pommes Frites</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quae exercitationem laboriosam in.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <span class="prev" id="slider-prev-btn"></span>
+            <span class="next" id="slider-next-btn"></span>
+          </div>
+        </div>
+      </section>
+      <!--==================== DESSERTS ====================-->
+      <section class="desserts section" id="desserts">
+        <h2 class="section-heading" ata-aos-once="false" data-aos="zoom-in">
+          Beliebteste Desserts
+        </h2>
+
+        <div id="desserts-container">
+          <div class="dessert-card" data-tilt>
+            <div class="banner">
+              <h2>brownie im cup</h2>
+            </div>
+            <img src="./content/media/browni.png" alt="brownie im cup" class="pop" />
+            <div class="content">
+              <div class="details">
+                <h4>Dessert</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="stock-info">
+                <p>Auf Lager</p>
+                <i class="ri-checkbox-circle-line"></i>
+              </div>
+            </div>
+          </div>
+          <div class="dessert-card" data-tilt>
+            <div class="banner">
+              <h2>brownie im cup</h2>
+            </div>
+            <img src="./content/media/browni.png" alt="brownie im cup" class="pop" />
+            <div class="content">
+              <div class="details">
+                <h4>Dessert</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="stock-info">
+                <p>Auf Lager</p>
+                <i class="ri-checkbox-circle-line"></i>
+              </div>
+            </div>
+          </div>
+          <div class="dessert-card" data-tilt>
+            <div class="banner">
+              <h2>brownie im cup</h2>
+            </div>
+            <img src="./content/media/browni.png" alt="brownie im cup" class="pop" />
+            <div class="content">
+              <div class="details">
+                <h4>Dessert</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="stock-info">
+                <p>Auf Lager</p>
+                <i class="ri-checkbox-circle-line"></i>
+              </div>
+            </div>
+          </div>
+          <div class="dessert-card" data-tilt>
+            <div class="banner">
+              <h2>brownie im cup</h2>
+            </div>
+            <img src="./content/media/browni.png" alt="brownie im cup" class="pop" />
+            <img src="content/media/new.png" alt="new dessert" class="pop new-item" />
+            <div class="content">
+              <div class="details">
+                <h4>Dessert</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="stock-info">
+                <p>Auf Lager</p>
+                <i class="ri-checkbox-circle-line"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ggggggggggggg -->
+        </div>
+      </section>
+      <!--==================== ABOUT US ====================-->
+      <section class="about-us section" id="about-us">
+        <h2 class="section-heading" ata-aos-once="false" data-aos="zoom-in">
+          Über Uns
+        </h2>
+
+        <div id="about-container">
+          <div id="restaurant-description">
+            <div class="description" data-aos="fade-down" data-aos-duration="800">
+              <h3>Wer wir sind</h3>
+              <video disablePictureInPicture autoplay muted loop id="team-card-video">
+                <source src="content/media/our-team.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+
+              <div>
+                Unser Team lässt die Gäste immer
+                <span>ein Teil des Menüs</span> werden!
+
+                <div>(Trailer - The Menu - 2022)</div>
+              </div>
+            </div>
+
+            <div class="our-motto" data-aos="flip-left">
+              <div>
+                <h3>Unser Motto</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Suscipit, velit? Inventore consectetur rerum repudiandae
+                  eum.
+                </p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              </div>
+            </div>
+
+            <div class="map-container" data-aos="fade-up" data-aos-duration="800">
+              <div id="map"></div>
+              <h3>Wo du uns findest</h3>
+            </div>
+          </div>
+        </div>
+        <div id="testimonials">
+          <h3>Was unsere Kunden sagen</h3>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-1.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Tom Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-2.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-line"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Nina Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-3.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-line"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Peter Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-4.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-line"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Laura Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-5.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Sam Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left-container">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <img src="content/media/testimonial-6.jpg" alt="" class="picture" />
+                  </div>
+                </div>
+
+                <div class="stars-container">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-line"></i>
+                </div>
+              </div>
+              <div class="info-container">
+                <div>
+                  <h3>Jill Mustermann</h3>
+                </div>
+                <div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Esse, illo libero. Quidem et blanditiis sapiente
+                    reprehenderit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section-heading" data-aos="zoom-in">Nimm Kontakt auf!</h2>
+
+        <div id="contact-container">
+          <div class="info">
+            <div class="infos">
+              <div class="info-item">
+                <i class="ri-map-pin-line"></i> 35039, Marburg
+              </div>
+              <div class="info-item">
+                <i class="ri-phone-line"></i> 06421 999 999
+              </div>
+              <div class="info-item">
+                <i class="ri-mail-line"></i>burgers-and-more@gmx.com
+              </div>
+              <div class="info-item">
+                <i class="ri-user-line"></i>Klaus Burger (Inhaber)
+              </div>
+
+              <div class="info-socials">
+                <a data-aos="flip-up" data-aos-duration="800" href="https://www.instagram.com/" class="info-social"
+                  target="_blank">
+                  <i class="ri-instagram-fill"></i>
+                </a>
+                <a data-aos="flip-up" data-aos-duration="1500" href="https://de.linkedin.com/" target="_blank"
+                  class="info-social">
+                  <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a data-aos="flip-up" data-aos-duration="1900" href="https://www.facebook.com/?locale=de_DE"
+                  class="info-social" target="_blank">
+                  <i class="ri-facebook-box-fill"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="form">
+            <form>
+              <input name="name" type="text" class="f-input" placeholder="Name" />
+              <input name="email" type="text" class="f-input" placeholder="Email" />
+              <textarea maxlength="170" name="text" class="f-input" placeholder="Deine Message!"></textarea>
+              <input type="submit" value="ABSENDEN" />
+            </form>
+          </div>
+        </div>
+
+        <div class="wave-svg">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"></path>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer" id="footer">
+      <div class="footer-bg">
+        <div class="footer-container">
+          <p class="copy-right">&copy; Alex Sel</p>
+          <div class="footer-links">
+            <ul class="footer-links-extern">
+              <li>
+                <a href="impressum.html" class="footer-link">Impressum </a>
+              </li>
+              <li>
+                <a href="datenschutz.html" class="footer-link">Datenschutz
+                </a>
+              </li>
+            </ul>
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/" class="footer-social" target="_blank">
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a href="https://de.linkedin.com/" target="_blank" class="footer-social">
+                <i class="ri-linkedin-box-fill"></i>
+              </a>
+              <a href="https://www.facebook.com/?locale=de_DE" class="footer-social" target="_blank">
+                <i class="ri-facebook-box-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+
+    <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-double-line"></i>
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/mainNavigationMenu.js" defer></script>
+  <script src="assets/js/anime-heading.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/desserts.js"></script>
+  <script src="assets/js/slider.js" defer></script>
+  <script src="assets/js/leaflet.js" defer></script>
+  <script src="assets/js/testimonials.js"></script>
+</body>
+
+</html>
